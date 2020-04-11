@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Binary Search Tree Visualisation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    
+    <script src="node.js"></script>
+    <script src="queqe.js"></script>
+    <script src="tree.js"></script>
+    <style>
+    #inp{
+        height:25px;
+        margin-bottom: 5px;
+    }
+    #footer{
+        position: fixed;
+        bottom:1px;
+        right:30%;
+        left:30%;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h1>Binary Search Tree Visualisation</h1><br>
+   
+    <form id='form'>
+    <input id='inp' type='number' placeholder="enter node value" />
+     
+     <button id='inp' onclick="tushar()" >Insert!</button>
+     </form>
+     <script>
+         document.getElementById('form').addEventListener('submit',(e)=>e.preventDefault())
+    var inp = ''
+    document.getElementById('inp').addEventListener('keyup',(e)=>{
+        inp = parseFloat(e.target.value)
+    })
+     function tushar(){
+         
+         tree.addData(inp)
+     }
+    
+     </script>
+    <script src="sketch.js"></script>
+    <p id='footer'>
+        Created  by Tushar
+    </p>
+</body>
+</html>
